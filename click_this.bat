@@ -1,7 +1,11 @@
 @echo off
+
 echo Starting program 1
-start cmd
-timeout /t 5 /nobreak > NUL
+start mongod
+
+timeout /t 10 /nobreak > NUL
+
 echo Starting program 2
-start powershell
-pause
+start npm run start:server
+
+exit
